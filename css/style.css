@@ -16,6 +16,16 @@
 a{
   text-decoration: none;
 }
+.btn{
+  border: 3px solid #10cab7;
+  border-radius: 1rem;
+  background-color: #fff;
+  width: 8rem;
+  height: 2rem;
+}
+.btn:hover{
+  box-shadow: 2px 2px 4px #000;
+}
 html {
   scroll-behavior: smooth;
 }
