@@ -13,10 +13,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-a{
-  text-decoration: none;
-}
-
 .btn{
   border: 3px solid #10cab7;
   border-radius: 1rem;
@@ -26,6 +22,9 @@ a{
 }
 .btn:hover{
   box-shadow: 2px 2px 4px #000;
+}
+a{
+  text-decoration: none;
 }
 html {
   scroll-behavior: smooth;
