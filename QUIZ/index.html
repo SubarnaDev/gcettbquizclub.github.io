@@ -1,51 +1,85 @@
-<!doctype html>
-<html lang=en>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset=UTF-8 />
-    <meta name=description content="Free coming soon template">
-    <meta name=author content="Pawel Zuchowski">
-    <meta name=viewport content="width=device-width,initial-scale=1" />
-    <meta http-equiv=X-UA-Compatible content="ie=edge" />
-    <link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css
-        integrity=sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO crossorigin=anonymous>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel=stylesheet>
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;700&display=swap" rel=stylesheet>
-    <link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <script src=https://kit.fontawesome.com/3c09bcb51a.js></script>
-    <title>Comming Soon</title>
-    <link href="styles/main.css" rel="stylesheet">
-</head>
-
-<body>
-    <div class=container>
-        <div class=row>
-            <div class="left-wrap col-12 col-md-5">
-                <div class=left>
-                    <p><span class=days></span><span class=small> days</span></p>
-                    <p><span class=hours></span><span class=small> hours</span></p>
-                    <p>&nbsp;&nbsp;<span class=minutes></span><span class=small> minutes</span></p>
-                    <p>&nbsp;&nbsp;<span class=seconds></span><span class=small> seconds</span></p>
-                </div>
-            </div>
-            <div class="col-12 col-md-7 right">
-                <div class=mainInfo>
-                    <h1>COMING SOON</h1>
-                    <p class=slogan>Quiz Competition Organized by GCETTB Quiz Club and institutions innovation council (IIC) <br>
-                         on 28 February,2025 <br> 3.00 pm onwards </p>
-                    <form class=form-subscribe action=#> <input type=email class=form placeholder="Your email address"
-                            required> 
-                            <a href="mailto:spandandas@gmail.com?subject=Quiz%20Competition%20Registration&body=Hello%20Spandan,%0D%0A%0D%0AI%20would%20like%20to%20register%20for%20the%20National%20Science%20Day%20Quiz%20Competition.%20Please%20find%20my%20details%20below.%0D%0A%0D%0AName:%20%5BYour%20Name%5D%0D%0AEmail:%20%5BYour%20Email%5D%0D%0APhone:%20%5BYour%20Phone%5D%0D%0AInstitution:%20%5BYour%20Institution%5D%0D%0A%0D%0AThanks!">
-                                <button type=submit>Ask question</button>
-                            </a>
-                             </form>
-                </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Starting Soon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #ff5722;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .countdown {
+            font-size: 24px;
+            font-weight: bold;
+            color: #008000;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function startCountdown() {
+            const quizTime = new Date();
+            quizTime.setHours(15, 0, 0); // 3:00 PM
+            
+            function updateCountdown() {
+                const now = new Date();
+                const diff = quizTime - now;
                 
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="scripts/bundle.js"></script>
- 
-</body>
+                if (diff <= 0) {
+                    document.getElementById("countdown").innerHTML = "🚀 The Quiz is Starting Now!";
+                } else {
+                    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                    const seconds = Math.floor((diff / 1000) % 60);
+                    document.getElementById("countdown").innerHTML = 
+                        `⏳ Starting in: ${hours}h ${minutes}m ${seconds}s`;
+                }
+            }
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+    </script>
+</head>
+<body onload="startCountdown()">
 
+    <div class="container">
+        <h1>🎉 Get Ready for the Quiz! 🎯</h1>
+        <p>The **National Science Day Quiz** will begin soon at <strong>3:00 PM</strong>.</p>
+        <p>Make sure you are ready! Stay on this page and refresh if needed.</p>
+        <p class="countdown" id="countdown">⏳ Loading Countdown...</p>
+        <a href="your-registration-page-link" class="button">Register Now</a>
+        <p>For any issues, contact us at <a href="mailto:spandandas@gmail.com?subject=Quiz%20Competition%20Registration&body=Hello%20Spandan,%0D%0A%0D%0AI%20would%20like%20to%20register%20for%20the%20National%20Science%20Day%20Quiz%20Competition.%20Please%20find%20my%20details%20below.%0D%0A%0D%0AName:%20%5BYour%20Name%5D%0D%0AEmail:%20%5BYour%20Email%5D%0D%0APhone:%20%5BYour%20Phone%5D%0D%0AInstitution:%20%5BYour%20Institution%5D%0D%0A%0D%0AThanks!">
+                                spandandas@gmail.com</a>.</p>
+    </div>
+
+</body>
 </html>
