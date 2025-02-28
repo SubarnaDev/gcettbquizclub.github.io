@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -144,6 +144,139 @@
                     spandandas7779@gmail.com</a>
             </p>
         </div>
+    </div>
+
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Starting Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 26px;
+            color: #ff5722;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+        .countdown {
+            font-size: 28px;
+            font-weight: bold;
+            color: #28a745;
+            margin-top: 15px;
+            animation: pulse 1s infinite alternate;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .email {
+            font-size: 16px;
+            word-wrap: break-word;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 22px; }
+            p { font-size: 16px; }
+            .countdown { font-size: 24px; }
+            .button { font-size: 16px; padding: 12px 20px; }
+        }
+    </style>
+    <script>
+        function startCountdown() {
+            const now = new Date();
+            const quizTime = new Date();
+            quizTime.setHours(15, 35, 0, 0); // Set to 3:35 PM local time
+
+            if (now > quizTime) {
+                quizTime.setDate(quizTime.getDate() + 1); // If already past, set for tomorrow
+            }
+
+            function updateCountdown() {
+                const now = new Date();
+                const diff = quizTime - now;
+
+                if (diff <= 0) {
+                    document.getElementById("countdown").innerHTML = "🚀 The Quiz is Starting Now!";
+                } else {
+                    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                    const seconds = Math.floor((diff / 1000) % 60);
+                    document.getElementById("countdown").innerHTML = 
+                        `⏳ Starting in: ${hours}h ${minutes}m ${seconds}s`;
+                }
+            }
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+    </script>
+</head>
+<body onload="startCountdown()">
+
+    <div class="container">
+        <h1>🎉 Get Ready for the Quiz! 🎯</h1>
+        <p>The <b>National Science Day Quiz</b> will begin soon at <strong>3:35 PM</strong>.</p>
+        <p>Make sure you are ready! Stay on this page and refresh if needed.</p>
+        <p class="countdown" id="countdown">⏳ Loading Countdown...</p>
+        <p>For now, complete your registration:</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcuzm2sJu8oKKzh14ddLkBLxp8wQPwRuvYMhX2m_qQoXvptg/viewform?usp=header" class="button">Register Now</a>
+        <p>For any issues, contact us at:</p>
+        <p class="email">
+            <a href="mailto:spandandas7779@gmail.com?subject=Quiz%20Competition%20Registration&body=Hello%20Spandan,%0D%0A%0D%0AI%20would%20like%20to%20register%20for%20the%20National%20Science%20Day%20Quiz%20Competition.%20Please%20find%20my%20details%20below.%0D%0A%0D%0AName:%20%5BYour%20Name%5D%0D%0AEmail:%20%5BYour%20Email%5D%0D%0APhone:%20%5BYour%20Phone%5D%0D%0AInstitution:%20%5BYour%20Institution%5D%0D%0A%0D%0AThanks!">
+                spandandas7779@gmail.com</a>
+        </p>
     </div>
 
 </body>
