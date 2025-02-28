@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Starting Soon</title>
+    <title>Quiz Started - Check Your Email</title>
     <style>
         * {
             margin: 0;
@@ -31,25 +31,19 @@
             backdrop-filter: blur(10px);
         }
         h1 {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
             margin-bottom: 15px;
-        }
-        p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .countdown {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffcc00;
-            margin-top: 20px;
             animation: pulse 1.5s infinite;
         }
         @keyframes pulse {
             0% { opacity: 1; }
             50% { opacity: 0.6; }
             100% { opacity: 1; }
+        }
+        p {
+            font-size: 18px;
+            margin-top: 10px;
         }
         .button {
             display: inline-block;
@@ -73,13 +67,10 @@
         }
         @media (max-width: 480px) {
             h1 {
-                font-size: 22px;
+                font-size: 24px;
             }
             p {
                 font-size: 16px;
-            }
-            .countdown {
-                font-size: 20px;
             }
             .button {
                 font-size: 16px;
@@ -87,49 +78,17 @@
             }
         }
     </style>
-    <script>
-        function startCountdown() {
-            const now = new Date();
-            const quizTime = new Date();
-            quizTime.setHours(16, 30, 0, 0); // Set to 4:30 PM local time
-
-            if (now > quizTime) {
-                quizTime.setDate(quizTime.getDate() + 1); // If already past 4:30 PM, set for tomorrow
-            }
-
-            function updateCountdown() {
-                const now = new Date();
-                const diff = quizTime - now;
-
-                if (diff <= 0) {
-                    document.getElementById("countdown").innerHTML = "🚀 The Quiz is Starting Now!";
-                } else {
-                    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-                    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-                    const seconds = Math.floor((diff / 1000) % 60);
-                    document.getElementById("countdown").innerHTML = 
-                        `⏳ Starting in: ${hours}h ${minutes}m ${seconds}s`;
-                }
-            }
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-        }
-    </script>
 </head>
-<body onload="startCountdown()">
+<body>
 
     <div class="container">
-        <h1>🎉 Get Ready for the Quiz! 🎯</h1>
-        <p>The <b>National Science Day Quiz</b> will begin soon at <strong>4:30 PM</strong>.</p>
-        <p>Make sure you are ready! Stay on this page and refresh if needed.</p>
-        <p class="countdown" id="countdown">⏳ Loading Countdown...</p>
-        <p>For now, complete your registration:</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcuzm2sJu8oKKzh14ddLkBLxp8wQPwRuvYMhX2m_qQoXvptg/viewform?usp=header" class="button">Register Now</a>
-        <p>For any issues, contact us at:</p>
-        <p class="email">
-            <a href="mailto:spandandas7779@gmail.com?subject=Quiz%20Competition%20Registration&body=Hello%20Spandan,%0D%0A%0D%0AI%20would%20like%20to%20register%20for%20the%20National%20Science%20Day%20Quiz%20Competition.%20Please%20find%20my%20details%20below.%0D%0A%0D%0AName:%20%5BYour%20Name%5D%0D%0AEmail:%20%5BYour%20Email%5D%0D%0APhone:%20%5BYour%20Phone%5D%0D%0AInstitution:%20%5BYour%20Institution%5D%0D%0A%0D%0AThanks!">
-                spandandas7779@gmail.com</a>
-        </p>
+        <h1>🎉 The Quiz Has Started! 🚀</h1>
+        
+        <p>Please check your email for the **quiz password**.</p>
+        <p>Ensure you enter the correct password to begin the quiz.</p>
+        <a href="http://newyearrr.rf.gd/" class="button">Start Quiz ➡</a>
+        <a href="mailto:spandandas7779@gmail.com" class="button">Need Help? Contact Us</a>
+        <p class="email">Didn't receive the email? Check spam or <b>refresh your inbox.</b></p>
     </div>
 
 </body>
